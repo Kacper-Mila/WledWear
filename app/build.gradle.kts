@@ -27,11 +27,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     useLibrary("wear-sdk")
     buildFeatures {
@@ -51,6 +51,13 @@ dependencies {
     implementation(libs.wear.tooling.preview)
     implementation(libs.activity.compose)
     implementation(libs.core.splashscreen)
+    implementation(libs.tiles.material)
+    implementation(libs.wear)
+    implementation(libs.core.ktx)
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.activity.ktx)
     androidTestImplementation(platform(libs.compose.bom))
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
